@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
     import './App.css';
+    import HeroSection from './components/HeroSection';
 
     function App() {
       const [name, setName] = useState('');
       const [email, setEmail] = useState('');
       const [institution, setInstitution] = useState('');
       const [yearOfStudy, setYearOfStudy] = useState('');
-      const [supportingDocuments, setSupportingDocuments] = useState(null);
+      const [nationalId, setNationalId] = useState(null);
+      const [schoolId, setSchoolId] = useState(null);
+      const [feeStructure, setFeeStructure] = useState(null);
+      const [parentsId, setParentsId] = useState(null);
+      const [parentsDeathCertificate, setParentsDeathCertificate] = useState(null);
       const [details, setDetails] = useState('');
       const [applicationStatus, setApplicationStatus] = useState('Not Submitted');
 
@@ -17,7 +22,11 @@ import React, { useState } from 'react';
         formData.append('email', email);
         formData.append('institution', institution);
         formData.append('yearOfStudy', yearOfStudy);
-        formData.append('supportingDocuments', supportingDocuments);
+        formData.append('nationalId', nationalId);
+        formData.append('schoolId', schoolId);
+        formData.append('feeStructure', feeStructure);
+        formData.append('parentsId', parentsId);
+        formData.append('parentsDeathCertificate', parentsDeathCertificate);
         formData.append('details', details);
 
         try {
@@ -57,18 +66,7 @@ import React, { useState } from 'react';
           </header>
 
           <main>
-            <section id="home" className="hero">
-              <div className="hero-content">
-                <h2>Empowering Your Education</h2>
-                <p>
-                  Welcome to the Kaiti Constituency Bursary Application portal. This program aims to support
-                  college and university students residing in Kaiti, Makueni County, by providing financial
-                  assistance for their education. Eligible students are encouraged to apply.
-                </p>
-                <p className="deadline"><b>Application Deadline:</b> [Insert Deadline Here]</p>
-                <button className="apply-button" onClick={() => window.location.href='#application-form'}>Apply Now</button>
-              </div>
-            </section>
+            <HeroSection />
 
             <section id="application-form" className="form-section">
               <h2>Application Form</h2>
@@ -90,8 +88,24 @@ import React, { useState } from 'react';
                   <input type="number" id="yearOfStudy" value={yearOfStudy} onChange={(e) => setYearOfStudy(e.target.value)} required />
                 </div>
                 <div className="input-group">
-                  <label htmlFor="supportingDocuments">Supporting Documents:</label>
-                  <input type="file" id="supportingDocuments" onChange={(e) => setSupportingDocuments(e.target.files[0])} required />
+                  <label htmlFor="nationalId">National ID:</label>
+                  <input type="file" id="nationalId" onChange={(e) => setNationalId(e.target.files[0])} required />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="schoolId">School ID:</label>
+                  <input type="file" id="schoolId" onChange={(e) => setSchoolId(e.target.files[0])} required />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="feeStructure">Fee Structure:</label>
+                  <input type="file" id="feeStructure" onChange={(e) => setFeeStructure(e.target.files[0])} required />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="parentsId">Parents ID (optional):</label>
+                  <input type="file" id="parentsId" onChange={(e) => setParentsId(e.target.files[0])} />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="parentsDeathCertificate">Parents Death Certificate (optional):</label>
+                  <input type="file" id="parentsDeathCertificate" onChange={(e) => setParentsDeathCertificate(e.target.files[0])} />
                 </div>
                 <div className="input-group">
                   <label htmlFor="details">Details of Need:</label>
@@ -133,8 +147,25 @@ import React, { useState } from 'react';
           </main>
 
           <footer>
+            <div className="footer-container">
+              <div className="footer-section">
+                <h3>About Us</h3>
+                <p>
+                  The Kaiti Constituency Bursary Program was established to provide financial assistance to needy
+                  students pursuing higher education in colleges and universities. The program is committed to
+                  promoting access to education and empowering the youth of Kaiti Constituency.
+                </p>
+              </div>
+              <div className="footer-section">
+                <h3>Contact Us</h3>
+                <p>
+                  For any inquiries, please contact the Kaiti Constituency Bursary Committee at:
+                  <br />
+                  [Insert Contact Information Here]
+                </p>
+              </div>
+            </div>
             <p>&copy; 2024 Kaiti Constituency Bursary Program. All rights reserved.</p>
-            <p><a href="/terms-and-conditions.html">Terms and Conditions</a> | <a href="/privacy-policy.html">Privacy Policy</a></p>
           </footer>
         </div>
       );

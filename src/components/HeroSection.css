@@ -1,0 +1,32 @@
+/* Hero Section Styles */
+    .hero-section {
+      background-image: url('hero-image.jpg'); /* Replace with actual image URL */
+      background-size: cover;
+      background-position: center;
+      height: 400px; /* Fixed height for hero section */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overlay: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .apply-button {
+      /* ... (styles remain the same) */
+    }

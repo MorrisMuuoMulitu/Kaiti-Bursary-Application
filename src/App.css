@@ -1,30 +1,34 @@
-body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
+/* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif; /* Modern font */
       margin: 0;
       padding: 0;
-      background-color: #e8f5e9; /* Light green background */
+      background-color: #f5f5f5; /* Soft gray background */
       color: #333;
     }
 
     .app-container {
-      max-width: 900px;
+      max-width: 1200px; /* Increased width for larger screens */
       margin: 0 auto;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
     }
 
+    /* Header Styles */
     header {
-      background-color: #4CAF50; /* Green header */
-      color: #fff;
+      background-color: #007BFF; /* Vibrant blue header */
+      color: white;
       padding: 20px 0;
+      text-align: center; /* Centered header content */
+      border-bottom: 2px solid #0056b3; /* Subtle border */
     }
 
-    .header-content {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0 20px;
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav ul {
@@ -32,38 +36,67 @@ body {
       padding: 0;
       margin: 0;
       display: flex;
+      justify-content: center; /* Centered navigation links */
     }
 
-    nav ul li {
-      margin-left: 20px;
+    nav li {
+      margin: 0 15px;
     }
 
-    nav ul li a {
-      color: #fff;
+    nav a {
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      transition: color 0.3s ease; /* Smooth color transition */
     }
 
+    nav a:hover {
+      color: #e0f2f7; /* Lighter blue on hover */
+    }
+
+    /* Hero Section Styles */
     .hero {
-      background-color: #c8e6c9; /* Light green background for hero */
-      padding: 40px 20px;
+      background-image: url('hero-image.jpg'); /* Replace with actual image URL */
+      background-size: cover;
+      background-position: center;
+      height: 400px; /* Fixed height for hero section */
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      color: white;
+      position: relative; /* Add for overlay positioning */
+    }
+
+    .hero::before { /* Create overlay using pseudo-element */
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
     }
 
     .hero-content {
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
+      z-index: 1; /* Ensure content is above overlay */
     }
 
-    .deadline {
-      font-size: 1.1em;
-      color: #d32f2f; /* Red color for deadline */
-      margin-top: 10px;
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      line-height: 1.6;
     }
 
     .apply-button {
-      background-color: #4CAF50; /* Green button */
-      color: #fff;
+      background-color: #007BFF; /* Blue button */
+      color: white;
       border: none;
       padding: 15px 30px;
       text-transform: uppercase;
@@ -71,14 +104,20 @@ body {
       border-radius: 5px;
       font-size: 1.2em;
       margin-top: 20px;
+      transition: background-color 0.3s ease;
     }
 
     .apply-button:hover {
-      background-color: #367c39; /* Darker green on hover */
+      background-color: #0056b3; /* Darker blue on hover */
     }
 
+    /* Form Section Styles */
     .form-section {
-      padding: 20px;
+      padding: 40px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: -40px; /* Overlap with hero section */
     }
 
     .input-group {
@@ -107,8 +146,8 @@ body {
     }
 
     .submit-button {
-      background-color: #4CAF50;
-      color: #fff;
+      background-color: #007BFF;
+      color: white;
       border: none;
       padding: 15px 30px;
       text-transform: uppercase;
@@ -116,10 +155,11 @@ body {
       border-radius: 5px;
       font-size: 1.2em;
       margin-top: 20px;
+      transition: background-color 0.3s ease;
     }
 
     .submit-button:hover {
-      background-color: #367c39;
+      background-color: #0056b3;
     }
 
     .status {
@@ -139,15 +179,76 @@ body {
       text-align: center;
       margin-top: 30px;
       padding: 20px;
-      background-color: #4CAF50;
-      color: #fff;
+      background-color: #007BFF;
+      color: white;
     }
 
     footer a {
-      color: #fff;
+      color: white;
       text-decoration: none;
     }
 
     h1, h2, h3 {
       color: #004d40; /* Dark green for headings */
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 10px;
+    }
+
+    .footer-section p {
+      margin: 0;
+    }
+
+    /* Mobile-first responsive design */
+    @media (max-width: 768px) {
+      .app-container {
+        padding: 10px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .hero {
+        height: 300px;
+      }
+
+      .hero h2 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+
+      .apply-button {
+        font-size: 1em;
+      }
+
+      .form-section {
+        padding: 20px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-section {
+        margin: 10px 0;
+      }
     }
