@@ -1,0 +1,153 @@
+body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #e8f5e9; /* Light green background */
+      color: #333;
+    }
+
+    .app-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      background-color: #4CAF50; /* Green header */
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-color: #c8e6c9; /* Light green background for hero */
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .deadline {
+      font-size: 1.1em;
+      color: #d32f2f; /* Red color for deadline */
+      margin-top: 10px;
+    }
+
+    .apply-button {
+      background-color: #4CAF50; /* Green button */
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    .apply-button:hover {
+      background-color: #367c39; /* Darker green on hover */
+    }
+
+    .form-section {
+      padding: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="file"] {
+      margin-top: 5px;
+    }
+
+    .submit-button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    .submit-button:hover {
+      background-color: #367c39;
+    }
+
+    .status {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .about-section, .faq-section, .contact-section {
+      padding: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #4CAF50;
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    h1, h2, h3 {
+      color: #004d40; /* Dark green for headings */
+    }
