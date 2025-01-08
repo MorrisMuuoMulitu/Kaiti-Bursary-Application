@@ -4,8 +4,39 @@
   margin: 0 auto;
 }
 
+.about-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.about-section h2 {
+  color: #2ecc71;
+  margin-bottom: 1rem;
+}
+
+.core-values {
+  list-style-type: none;
+  padding: 0;
+}
+
+.core-values li {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 768px) {
   .about-container {
+    padding: 1rem;
+  }
+
+  .about-section {
+    margin: 1rem 0;
     padding: 1rem;
   }
 }

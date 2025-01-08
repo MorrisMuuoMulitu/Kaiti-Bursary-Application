@@ -6,10 +6,46 @@
 
 .contact-info {
   margin-top: 1rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h3 {
+  color: #2ecc71;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item a {
+  color: #2ecc71;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.contact-item a:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
   .contact-container {
     padding: 1rem;
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+
+  .contact-item {
+    margin: 1rem 0;
+    padding: 0.8rem;
   }
 }

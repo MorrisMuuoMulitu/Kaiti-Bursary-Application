@@ -19,7 +19,9 @@ function App() {
       <div className="app-container">
         <header>
           <div className="nav-container">
-            <div className="logo">Kaiti Constituency</div>
+            <Link to="/" className="logo-link">
+              <div className="logo">Kaiti Constituency</div>
+            </Link>
             <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
               <Link to="/" onClick={toggleMenu}>Home</Link>
               <Link to="/apply" onClick={toggleMenu}>Apply</Link>
